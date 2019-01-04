@@ -1,0 +1,35 @@
+﻿<div ng-controller="checklist.contentAppController">
+    <umb-box>
+        <umb-box-content>
+            <div class="flex items-center" style="flex: 1;">
+                <div style="flex: 1 1 auto;">
+                    <input type="text" class="umb-editor-header__name-input" localize="placeholder" placeholder="@checklist_addTaskPlaceholder" ng-model="content.task.content" ng-keydown="enterSubmitTask($event)" umb-auto-focus no-dirty-check />
+                </div>
+                <umb-button type="button" label="Add task" label-key="checklist_addTask" action="addTask()" disabled="actionInProgress || !content.task.content" style="margin-left: 20px;" />
+            </div>
+        </umb-box-content>
+    </umb-box>    
+
+    <div class="umb-table" ng-if="!isLoading && content.tasks.length > 0">
+        <div class="umb-table-body">
+            <div class="umb-table-row  checklist__task" ng-repeat="task in content.tasks" ng-class="{'checklist__task--is-ready': task.isReady }">
+                <div class="umb-table-cell">
+                    <umb-checkmark checked="task.isReady" size="xs" ng-click="selectItem(task, $event)"/>
+                </div>
+                <div class="umb-table-cell  checklist__task--name">
+                    <span>
+                        {{ task.content }}
+                    </span>
+                </div>
+                <div class="umb-table-cell  umb-table-cell--auto-width">
+                    <umb-button ng-if="task.isReady" type="button" size="xxs" button-style="danger" state="language.deleteButtonState" action="deleteTask(task, $event)" disabled="actionInProgress" label-key="general_delete" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <umb-empty-state ng-if="content.tasks.length === 0" position="center">
+        
+        <localize key="checklist_noTask">Please, create some tasks</localize>
+    </umb-empty-state>
+</div>

@@ -1,0 +1,19 @@
+﻿{
+  "contentApps": [
+    {
+      "name": "Checklist",
+      "alias": "appChecklis",
+      "weight": 0,
+      "icon": "icon-checkbox",
+      "view": "~/App_Plugins/umbraco-checklist/backoffice/contentApp/contentApp.html"
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/umbraco-checklist/resources/checklist.resource.js",
+
+    "~/App_Plugins/umbraco-checklist/backoffice/contentApp/contentApp.controller.js"
+  ],
+  "css": [
+    "~/App_Plugins/umbraco-checklist/checklist.css"
+  ]
+}

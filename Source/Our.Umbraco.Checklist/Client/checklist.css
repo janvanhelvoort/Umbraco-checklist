@@ -1,0 +1,9 @@
+.checklist__task:not(.checklist__task--is-ready) .checklist__task--name {
+    color: #000000;   
+	font-weight: 700;	
+}
+
+.checklist__task.checklist__task--is-ready .checklist__task--name {
+    color: #817f85;
+    text-decoration: line-through;
+}

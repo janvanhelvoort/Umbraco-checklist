@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<language alias="nl" intName="Dutch" localName="Nederlands" lcid="" culture="nl-NL">
+  <area alias="checklist">
+    <key alias="addTask">Voeg taak toe</key>    
+    <key alias="addTaskPlaceholder">Wat gedaan moet worden?</key>
+    
+    <key alias="noTasks">Maak een nieuwe taak</key>
+  </area>
+</language>

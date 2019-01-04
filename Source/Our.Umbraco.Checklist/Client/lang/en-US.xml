@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<language alias="en" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+  <area alias="checklist">
+    <key alias="addTask">Add task</key>    
+    <key alias="addTaskPlaceholder">What needs to be done?</key>
+    
+    <key alias="noTasks">Please, create a task</key>
+  </area>
+</language>
