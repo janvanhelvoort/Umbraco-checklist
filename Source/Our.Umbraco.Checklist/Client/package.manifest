@@ -5,7 +5,10 @@
       "alias": "appChecklis",
       "weight": 0,
       "icon": "icon-checkbox",
-      "view": "~/App_Plugins/umbraco-checklist/backoffice/contentApp/contentApp.html"
+      "view": "~/App_Plugins/umbraco-checklist/backoffice/contentApp/contentApp.html",
+      "show": [ 
+        "-media/*" // hide for all media types
+      ]
     }
   ],
   "javascript": [
